@@ -39,10 +39,8 @@ function App() {
   
   return (
     <div className="App">
-
-      <h1>HELLO WORLD</h1>
       <Display balls={balls} strikes={strikes}/>
-      <Dashboard clearState={clearState()} Strikes={Strikes()} Balls={Balls()} Foul={Foul()}/>
+      <Dashboard clearState={clearState} Strikes={Strikes} Balls={Balls} Foul={Foul}/>
     </div>
   );
 }
