@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Display = () => {
 
@@ -6,3 +6,5 @@ const Display = () => {
         <h1>I AM DISPLAY</h1>
     )
 }
+
+export default Display;
