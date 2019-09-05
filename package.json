@@ -1,0 +1,17 @@
+{
+  "name": "Web-Application-Testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/connorholly11/Web-Application-Testing.git",
+  "author": "<connorholly11@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@testing-library/react": "^9.1.4"
+  }
+}
