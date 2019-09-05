@@ -12,7 +12,6 @@ function App() {
       <h1>HELLO WORLD</h1>
       <Display />
       <Dashboard />
-      
     </div>
   );
 }

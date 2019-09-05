@@ -10,13 +10,39 @@ const Dashboard = () => {
         setBalls(0);
         setStrikes(0);
     }
+
+    const Strikes = () => {
+        if (strikes < 2){
+            setStrikes(strikes + 1)
+        }else{
+            clearState()
+        }
+    }
+
+    const Balls = () => {
+        if (balls < 3){
+            setBalls(balls + 1)
+        }else{
+            clearState()
+        }
+    }
+
+    const Foul = () => {
+        if (strikes < 2){
+            setStrikes(strikes + 1)
+        }else if(strikes === 2){
+            setStrikes(strikes + 0)
+        }
+    }
     return(
         <div>
             <h1>I AM Dashboard</h1>
+            <h3>Strikes: {strikes}</h3>
+            <h3>Balls: {balls}</h3>
             <div className="buttons">
-                <button onClick={() => setStrikes(strikes + 1)}> Strike </button>
-                <button onClick={() => setBalls(balls + 1)}> Ball </button>
-                <button onClick={() => setStrikes(strikes + 1)}> Foul </button>
+                <button onClick={() => {Strikes()}}> Strike </button>
+                <button onClick={() => {Balls()}}> Ball </button>
+                <button onClick={() => {Foul()}}> Foul </button>
                 <button onClick={() => clearState()}> HIT </button>
             </div>
         </div>
