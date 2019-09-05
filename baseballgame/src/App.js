@@ -7,10 +7,12 @@ function App() {
   
   const [balls, setBalls] = useState(0);
   const [strikes, setStrikes] = useState(0);
+  const [outs, setOuts] = useState(0);
 
   const clearState = () => {
       setBalls(0);
       setStrikes(0);
+      setOuts(0);
   }
 
   const Strikes = () => {
@@ -36,11 +38,19 @@ function App() {
           setStrikes(strikes + 0)
       }
   }
+
+  const Outs = () => {
+    if (outs < 2){
+      setOuts(outs + 1)
+    }else{
+      clearState();
+    }
+  }
   
   return (
     <div className="App">
-      <Display balls={balls} strikes={strikes}/>
-      <Dashboard clearState={clearState} Strikes={Strikes} Balls={Balls} Foul={Foul}/>
+      <Display balls={balls} strikes={strikes} outs={outs}/>
+      <Dashboard clearState={clearState} Strikes={Strikes} Balls={Balls} Foul={Foul} Outs={Outs}/>
     </div>
   );
 }

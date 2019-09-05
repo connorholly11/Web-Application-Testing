@@ -12,6 +12,7 @@ const Dashboard = (props) => {
                 <button onClick={() => props.Balls()}> Ball </button>
                 <button onClick={() => props.Foul()}> Foul </button>
                 <button onClick={() => props.clearState()}> HIT </button>
+                <button onClick={() => props.Outs()}> Out </button>
             </div>
         </div>
     )
