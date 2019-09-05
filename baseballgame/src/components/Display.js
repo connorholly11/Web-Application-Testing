@@ -7,8 +7,13 @@ const Display = () => {
     return(
         <div>
             <h1>I AM DISPLAY</h1>
-            <button> Strike </button>
-            <button> Ball </button>
+            <h3>Strikes: {strikes}</h3>
+            <h3>Balls: {balls}</h3>
+            <div className="buttons">
+                <button onClick={() => setStrikes(strikes + 1)}> Strike </button>
+                <button onClick={() => setBalls(balls + 1)}> Ball </button>
+                <button onClick={() => setStrikes(strikes)}> HIT </button>
+            </div>
         </div>
     )
 }
