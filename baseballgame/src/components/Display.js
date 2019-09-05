@@ -1,9 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react';
 
 const Display = () => {
+    const [balls, setBalls] = useState(0);
+    const [strikes, setStrikes] = useState(0);
 
     return(
-        <h1>I AM DISPLAY</h1>
+        <div>
+            <h1>I AM DISPLAY</h1>
+            <button> Strike </button>
+            <button> Ball </button>
+        </div>
     )
 }
 
