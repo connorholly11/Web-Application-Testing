@@ -11,6 +11,14 @@ it('renders without crashing', () => {
 
 test('to see if strikes fuction is working', () => {
   it('adds strikes and then resets it at 3', () =>{
-    expect(strikes().toBe())
+    expect(Strikes(1).toBe(2))
+  })
+})
+
+test('to see if strike, ball, foul, hit, Out are there', () => {
+  it('sees if strike is on there', () => {
+    const {getByText} = render(<App />)
+
+    getByText(/strike/i);
   })
 })
