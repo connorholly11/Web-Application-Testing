@@ -45,16 +45,18 @@
 .display{
   display:flex;
   justify-content:space-evenly;
+  flex-direction:row;
   
-  .displaystat{
-  background:red;
+  .stat{
+    display:flex;
+    background:red;
   }
 }
 
 
 //DASHBOARD
 
-.dashboard{
+.dashboardbuttons{
   .buttons{
     display:flex;
     justify-content:space-evenly;

@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './App.scss';
 import Display from './components/Display';
 import Dashboard from './components/Dashboard';
+// import Soxlogocircle from './Photos/'
+// import Soxlogo from './Photos/soxlogo.jpg';
 
 function App() {
   
@@ -9,6 +11,7 @@ function App() {
   const [strikes, setStrikes] = useState(0);
   const [outs, setOuts] = useState(0);
   const [hit, setHit] = useState(0);
+  const [inning, setInning] = useState(1);
 
   const clearState = () => {
       setBalls(0);
@@ -17,6 +20,7 @@ function App() {
         setOuts(outs + 1)
       }else{
         setOuts(0);
+        setInning(inning + 1)
       }
   }
 
@@ -25,6 +29,7 @@ function App() {
           setStrikes(strikes + 1)
       }else{
           clearState()
+          console.log('strikeout')
       }
   }
 
@@ -32,7 +37,9 @@ function App() {
       if (balls < 3){
           setBalls(balls + 1)
       }else{
-          clearState()
+          setBalls(0);
+          setStrikes(0);
+          console.log('walk')
       }
   }
 
@@ -47,6 +54,9 @@ function App() {
   const Outs = () => {
     if (outs < 2){
       setOuts(outs + 1)
+      setStrikes(0);
+      setBalls(0);
+      console.log('out')
     }else{
       clearState();
     }
@@ -56,12 +66,14 @@ function App() {
     setHit(hit + 1)
     setStrikes(0)
     setBalls(0)
+    console.log('hit')
   }
+
   
   return (
     <div className="scoreboard">
-      <Display balls={balls} strikes={strikes} outs={outs}/>
-      <div className="buttons">
+      <Display balls={balls} strikes={strikes} outs={outs} inning={inning}/>
+      <div className="dashboardbuttons">
         <Dashboard clearState={clearState} Strikes={Strikes} Balls={Balls} Foul={Foul} Outs={Outs} Hit={Hit}/>
       </div>
     </div>

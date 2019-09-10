@@ -6,7 +6,7 @@ const Dashboard = (props) => {
 
 
     return(
-        <div className="dashboard">
+        <div>
             <div className="buttons">
                 <button onClick={() => props.Strikes()}> Strike </button>
                 <button onClick={() => props.Balls()}> Ball </button>

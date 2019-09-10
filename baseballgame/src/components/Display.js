@@ -6,12 +6,16 @@ const Display = (props) => {
 
     return(
         <div className="display">
-            <h3 className="displaystat">Strikes: </h3>
-                <div>{props.strikes}</div>
-            <h3 className="displaystat">Balls: </h3>
-                <div>{props.balls}</div>
-            <h3 className="displaystat">Outs: </h3>
-                <div>{props.outs}</div>
+            <div className="stat">
+                <h3>Strikes: </h3>
+                    <div>{props.strikes}</div>
+                <h3>Balls: </h3>
+                    <div>{props.balls}</div>
+                <h3>Outs: </h3>
+                    <div>{props.outs}</div>
+                <h3>Inning</h3>
+                    <div>{props.inning}</div>
+            </div>
         </div>
     )
 }
