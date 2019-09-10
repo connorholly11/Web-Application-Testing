@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -31,3 +29,36 @@
     transform: rotate(360deg);
   }
 }
+
+//SCOREBOARD
+
+.scoreboard {
+  width:60%;
+  margin:10rem auto;
+  text-align: center;
+  color:white;
+  background:black;
+}
+
+//DISPLAY
+
+.display{
+  display:flex;
+  justify-content:space-evenly;
+  
+  .displaystat{
+  background:red;
+  }
+}
+
+
+//DASHBOARD
+
+.dashboard{
+  .buttons{
+    display:flex;
+    justify-content:space-evenly;
+    margin-top:5rem;
+  }
+}
+

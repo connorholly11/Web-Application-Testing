@@ -5,10 +5,13 @@ const Display = (props) => {
     
 
     return(
-        <div>
-            <h3>Strikes: {props.strikes}</h3>
-            <h3>Balls: {props.balls}</h3>
-            <h3>Outs: {props.outs}</h3>
+        <div className="display">
+            <h3 className="displaystat">Strikes: </h3>
+                <div>{props.strikes}</div>
+            <h3 className="displaystat">Balls: </h3>
+                <div>{props.balls}</div>
+            <h3 className="displaystat">Outs: </h3>
+                <div>{props.outs}</div>
         </div>
     )
 }
